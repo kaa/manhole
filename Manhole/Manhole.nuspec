@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+		<id>Manhole</id>
+		<version>1.1.0.0</version>
+		<authors>Joakim Beijar</authors>
+		<owners>Joakim Beijar</owners>
+		<licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+		<projectUrl>http://kaa.github.io/manhole</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>A simple REPL console into a running ASPNET application</description>
+		<language>en-US</language>
+		<tags>diagnostic repl console</tags>
+		<dependencies>
+			<dependency id="Mono.CSharp"/>
+			<dependency id="Newtonsoft.Json"/>
+		</dependencies>
+		<releaseNotes>
+			Refactored how manhole console is included by clients.
+		</releaseNotes>
+  </metadata>
+	<files>
+		<file src="bin\Release\Manhole.dll" target="lib\net45" />
+	</files>
+</package>

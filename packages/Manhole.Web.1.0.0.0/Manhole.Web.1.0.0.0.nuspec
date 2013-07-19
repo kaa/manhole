@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Manhole.Web</id>
+    <version>1.0.0.0</version>
+    <authors>Joakim Beijar</authors>
+    <owners>Joakim Beijar</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>http://kaa.github.io/manhole</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple REPL into a running web application</description>
+    <language>en-US</language>
+    <tags>diagnostic repl</tags>
+    <dependencies>
+      <dependency id="Manhole" />
+      <dependency id="WebActivatorEx" />
+    </dependencies>
+  </metadata>
+</package>

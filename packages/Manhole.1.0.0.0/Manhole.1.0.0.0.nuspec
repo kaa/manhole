@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Manhole</id>
+    <version>1.0.0.0</version>
+    <title>Manhole</title>
+    <authors>Joakim Beijar</authors>
+    <owners>Joakim Beijar</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simpel REPL into a running ASP.NET application</description>
+    <copyright>Copyright © 2013</copyright>
+    <dependencies>
+      <dependency id="Mono.CSharp" version="3.0.6" />
+      <dependency id="Newtonsoft.Json" version="5.0.5" />
+    </dependencies>
+  </metadata>
+</package>
