@@ -12,23 +12,34 @@ using System.Text.RegularExpressions;
 namespace Manhole {
 	public class ManholeRouteHandler : IHttpHandler, IRouteHandler {
 		private static Evaluator evaluator;
+		private static SingleMessageReportPrinter reportPrinter;
 		public Evaluator Evaluator { 
 			get {
 				if(evaluator == null) {
+					reportPrinter = new SingleMessageReportPrinter();
 					evaluator = new Evaluator(
-						new CompilerContext(new CompilerSettings {
-							AssemblyReferences = AppDomain.CurrentDomain
-								.GetAssemblies()
-								.Select(t => t.FullName)
-								.ToList()
-						}, 
-						new ConsoleReportPrinter())
+						new CompilerContext(
+							new CompilerSettings {
+								AssemblyReferences = AppDomain.CurrentDomain
+									.GetAssemblies()
+									.Select(t => t.FullName)
+									.ToList()
+							}, 
+							reportPrinter
+						)
 					);
 				}
 				return evaluator;
 			}
 			set {
 				evaluator = value;
+			}
+		}
+
+		class SingleMessageReportPrinter : ReportPrinter {
+			public AbstractMessage Message { get; set; }
+			public override void Print(AbstractMessage msg, bool showFullPath) {
+ 				Message = msg;
 			}
 		}
 
@@ -106,7 +117,7 @@ namespace Manhole {
 					context.Response.ContentType = "application/json";
 					context.Response.Write(JsonConvert.SerializeObject(result));
 				} catch(Exception e) {
-					Error(context, "501 Internal server error", e.ToString());
+					Error(context, "500 Internal server error", e.Message);
 				}
 			}
 		}

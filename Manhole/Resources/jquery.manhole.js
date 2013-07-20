@@ -25,7 +25,7 @@
 						term.resume();
 					})
 					.error(function(xhr, status, type) {
-						term.error(xhr.responseText);
+						term.error($.terminal.encode(xhr.responseText).replace(/\<br\/\>/g, "\n"));
 						term.resume();
 					})
 			}, this.options)
