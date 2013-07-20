@@ -77,7 +77,10 @@ namespace Manhole {
 				}
 				Resource(context, "jquery.terminal-0.6.3.min.js");
 				Resource(context, "jquery.manhole.js");
-				Resource(context, "manhole.bootstrap.js", new NameValueCollection { { "CSS_PATH", context.Request.Url.AbsolutePath+"?jquery.terminal.css" } });
+				Resource(context, "manhole.bootstrap.js", new NameValueCollection { 
+					{ "CSS_PATH",      context.Request.Url.AbsolutePath+"?jquery.terminal.css" },
+					{ "ENDPOINT_PATH", new Uri(context.Request.Url,".").ToString() }
+				});
 			} else {
 				Resource(context, path);
 			}

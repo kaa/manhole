@@ -4,5 +4,7 @@
 	document.write('<div id="manhole-' + id + '"></div>');
 	document.close();
 	jQuery(document.head).append('<link rel="stylesheet" href="$CSS_PATH$"/>');
-	jQuery("#manhole-" + id).manhole();
+	jQuery("#manhole-" + id).manhole({
+		endpointUrl: '$ENDPOINT_PATH$'
+	});
 })();
