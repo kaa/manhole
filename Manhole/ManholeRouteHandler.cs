@@ -28,6 +28,11 @@ namespace Manhole {
 							reportPrinter
 						)
 					);
+					evaluator.Evaluate(@"
+						using System; 
+						using System.Linq; 
+						using System.Text
+					");
 				}
 				return evaluator;
 			}
