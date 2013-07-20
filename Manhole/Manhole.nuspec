@@ -2,7 +2,7 @@
 <package >
   <metadata>
 		<id>Manhole</id>
-		<version>1.1.0.0</version>
+		<version>1.2.0.0</version>
 		<authors>Joakim Beijar</authors>
 		<owners>Joakim Beijar</owners>
 		<licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
@@ -16,7 +16,7 @@
 			<dependency id="Newtonsoft.Json"/>
 		</dependencies>
 		<releaseNotes>
-			Refactored how manhole console is included by clients.
+			Improved error reporting, fixed bootstrap script.
 		</releaseNotes>
   </metadata>
 	<files>
