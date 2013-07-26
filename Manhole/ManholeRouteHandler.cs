@@ -28,7 +28,7 @@ namespace Manhole {
 							reportPrinter
 						)
 					);
-					evaluator.Evaluate(@"
+					evaluator.Run(@"
 						using System; 
 						using System.Linq; 
 						using System.Text
