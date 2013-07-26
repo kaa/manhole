@@ -2,7 +2,7 @@
 <package >
   <metadata>
 		<id>Manhole</id>
-		<version>1.2.0.0</version>
+		<version>1.2.2.4</version>
 		<authors>Joakim Beijar</authors>
 		<owners>Joakim Beijar</owners>
 		<licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
@@ -21,5 +21,6 @@
   </metadata>
 	<files>
 		<file src="bin\Release\Manhole.dll" target="lib\net45" />
+		<file src="bin\Release\Manhole.pdb" target="lib\net45" />
 	</files>
 </package>
