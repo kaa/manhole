@@ -79,7 +79,7 @@ namespace Manhole {
 				Resource(context, "jquery.manhole.js");
 				Resource(context, "manhole.bootstrap.js", new NameValueCollection { 
 					{ "CSS_PATH",      context.Request.Url.AbsolutePath+"?jquery.terminal.css" },
-					{ "ENDPOINT_PATH", new Uri(context.Request.Url,".").ToString() }
+					{ "ENDPOINT_PATH", context.Request.Url.AbsolutePath.ToString() }
 				});
 			} else {
 				Resource(context, path);
