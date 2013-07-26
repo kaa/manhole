@@ -29,9 +29,8 @@ namespace Manhole {
 						)
 					);
 					evaluator.Run(@"
-						using System; 
 						using System.Linq; 
-						using System.Text
+						using System.Text;
 					");
 				}
 				return evaluator;
