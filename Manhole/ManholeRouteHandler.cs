@@ -21,7 +21,8 @@ namespace Manhole {
 						new CompilerContext(
 							new CompilerSettings {
 								AssemblyReferences = AppDomain.CurrentDomain
-									.GetAssemblies()
+									.GetAssemblies() 
+									.Where(t => !t.IsDynamic)
 									.Select(t => t.FullName)
 									.ToList()
 							}, 
