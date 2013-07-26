@@ -122,11 +122,12 @@ namespace Manhole {
 				object result = null; bool result_set;
 				try {
 					Evaluator.Evaluate(command, out result, out result_set);
-					context.Response.ContentType = "application/json";
-					context.Response.Write(JsonConvert.SerializeObject(result));
 				} catch(Exception e) {
-					Error(context, "500 Internal server error", e.Message);
+					Error(context, "500 Internal server error", e.ToString());
+					return;
 				}
+				context.Response.ContentType = "application/json";
+				context.Response.Write(JsonConvert.SerializeObject(result));
 			}
 		}
 
