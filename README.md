@@ -1,3 +1,6 @@
+> [!NOTE]
+> This project is no longer maintained
+
 # Manhole
 
 The Manhole package provides a simple REPL into a running ASP.NET application.
